@@ -1,15 +1,18 @@
 body{
-  background-image: url("chewy.jpg");
+  background-color:#ffcccc;
+  font-family: Raleway;
 }
-
 h1{
-
+  background-color:#ffcc99;
   border: 4px dotted white;
   text-align: center;
 }
-
 img{
   image-orientation: center;
+}
+
+marquee{
+
 }
 
 ul{
@@ -24,7 +27,7 @@ ol{
 
 #good {
   background-color: lightblue;
-  width:400px;
+  width:500px;
   margin:0 auto;
 }
 
