@@ -1,9 +1,17 @@
 body{
-  background-color:#ffcccc;
-  font-family: Raleway;
+  background-color: #ffcccc;
 }
+
 h1{
   background-color:#ffcc99;
+  border: 4px dotted white;
+  text-align: center;
+}
+
+h2{
+  background-color: lightblue;
+  width:500px;
+  margin:0 auto;
   border: 4px dotted white;
   text-align: center;
 }
