@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title> Nine Stories </title>
+    <link rel="stylesheet"
+    href="styles.css"/>
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Introduction</a>
+  <a href="https://sophiewestfall.github.io/core-interaction/deep/index.html">Full Text</a>
+  <a href="boygirl.html">She was a memorable girl</a>
+  <a href="monet.html">It drives ya loony</a>
+  <a href="twogirls.html">Degenerates</a>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  <img src="no.png" onmouseover="rollover(this)"
+onmouseout="mouseaway(this)" />
+
+<center><a href="monet.html" class="previous round">&#8249;</a></center>
+
+</body>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+function rollover(my_image){
+    my_image.src = "twogirls.png";
+  }
+function mouseaway(my_image){
+       my_image.src = "no.png";
+     }
+     function myFunction() {
+document.getElementById("myDropdown").classList.toggle("show");
+}
+
+</script>
+</html>
