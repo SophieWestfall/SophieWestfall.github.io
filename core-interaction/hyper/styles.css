@@ -1,8 +1,11 @@
 img{
    height: 650px;
    width: 400px;
-   image-orientation: center;
-   padding-left: 400px;
+   /* image-orientation: center;
+   padding-left: 450px; */
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
 }
 body{
   font-family: serif;
