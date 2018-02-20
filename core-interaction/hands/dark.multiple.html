@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Hands </title>
+<link rel="stylesheet"
+href="styles.css"/>
+</head>
+<style>
+overflow-x: hidden;
+}
+
+.container {
+width: 100%;
+height: 1000px;
+}
+
+.square {
+position: absolute;
+}
+
+.square-1 {
+width: 100px;
+height: 100px;
+/* background: red; */
+/* top: 600px; */
+}
+
+.square-2 {
+width: 120px;
+height: 120px;
+/* background: black; */
+left: 400px;
+top: 100px;
+}
+
+.square-3 {
+width: 120px;
+height: 120px;
+/* background: black; */
+left: 550px;
+top: 400px;
+}
+</style>
+<body>
+  <a href="palette.html" class="previous round" style="
+      margin-top: 30px;
+  ">‹</a>
+
+  <div class="container" id="container">
+  <div class="square square-1">
+    <img src="darkhands.png" width="500" height="350">
+  </div>
+  <div class="square square-3">
+    <img src="multiple.png" width="600" height="450" style="
+        padding-bottom: 40px;
+    ">  </div>
+  <!-- <div class="square square-2">
+    <img src="darkhands.png" width="500" height="350">
+  </div> -->
+
+</div>
+</body>
+<script>
+var container = document.getElementById('container');
+var windowHeight = window.innerHeight;
+var windowWidth = window.innerWidth;
+var scrollArea = 1000 - windowHeight;
+var square1 = document.getElementsByClassName('square')[0];
+var square2 = document.getElementsByClassName('square')[1];
+
+// update position of square 1 and square 2 when scroll event fires.
+window.addEventListener('scroll', function() {
+  var scrollTop = window.pageYOffset || window.scrollTop;
+  var scrollPercent = scrollTop/scrollArea || 0;
+
+  square1.style.left = scrollPercent*window.innerWidth + 'px';
+  square2.style.left = 800 - scrollPercent*window.innerWidth*0.6 + 'px';
+  square3.style.left = 100 + scrollPercent*window.innerWidth + 'px';
+
+
+});
+</script>
+</html>
