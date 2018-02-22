@@ -25,6 +25,7 @@ body{
   padding-left: 50px;
   color: #bfa39d;
   font-weight: lighter;
+
   /* text-align: justify;
   text-justify: inter-word; */
   margin: 0;
@@ -127,12 +128,16 @@ a {
 
 a:hover {
     /* background-color: black; */
-    color: white;
+    color: black;
+}
+
+a:visited {
+  color: black;
 }
 
 .previous {
     background-color: #ffcccc;
-    color: white;
+    color: black;
 }
 
 

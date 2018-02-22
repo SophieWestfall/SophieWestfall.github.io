@@ -51,6 +51,9 @@ top: 350px;
   <div class="square square-2">
     <img src="pink.jpg" width="750" height="850">
   </div>
+  <div class="square square-2">
+  <a href="tarjani.html"><img src="tarjani.png" width="350" height="650"></a>
+  </div>
   <div class="square square-1">
     <img src="leaf.jpg" width="300" height="500" style="
         padding-bottom: 40px;
@@ -74,7 +77,7 @@ window.addEventListener('scroll', function() {
   var scrollTop = window.pageYOffset || window.scrollTop;
   var scrollPercent = scrollTop/scrollArea || 0;
 
-  square1.style.right = scrollPercent*window.innerWidth + 'px';
+  square1.style.left = scrollPercent*window.innerWidth + 'px';
   square2.style.left = 300 - scrollPercent*window.innerWidth*0.6 + 'px';
   square3.style.right = 800 + scrollPercent*window.innerWidth*0.9 + 'px';
 
