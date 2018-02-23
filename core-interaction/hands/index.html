@@ -1,77 +1,124 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-<title> Hands </title>
-<link rel="stylesheet"
-href="styles.css"/>
-</head>
-<style>
-body, html {
-    height: 100%;
-    margin: 0;
-    font-style: italic;
-    font-weight: lighter;
-    font-size: 60px;
-    color: #990033;
+  <head>
+    <title>
+testttt
+    </title>
+    <link rel="stylesheet"
+    href="styles.css"/>
+  </head>
+  <style>
+  body {
+  overflow-x: hidden;
+}
+.container {
+  width: 100%;
+  height: 1000px;
 }
 
-.bg {
-    background-image: url("adamhands.png");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #ffdfbf;
-}
-a:hover{
-  color: white;
+.square {
+  position: absolute;
 }
 
-</style>
+.square-1 {
+  width: 100px;
+  height: 200px ;
+  /* background: #cccc99; */
+  top: 90px;
+  padding-top: 50px;
+}
 
-<body style="
-    padding-left: 0px;
-    padding-right: 0px;
-">
+.square-2 {
+  width: 200px;
+  height: 100px;
+  /* background: #ffcccc; */
+  left: 800px;
+  top: 30px;
+  padding-top: 50px;
+}
+.square-3 {
+  width: 100px;
+  height: 200px;
+  /* background: #996666; */
+  left: 200px;
+  top: 200px;
+  padding-top: 50px;
+}
+.square-4 {
+  width: 200px;
+  height: 100px;
+  /* background: #cc9966; */
+  right: 900px;
+  top: 100px;
+  padding-top: 50px;
 
-      <div class="bg">
-        <a href="palette.html" style="
-            margin-top: 30%;
-            margin-left: 50%;
-            margin-right: 45%;
-            margin-bottom: 45%;
-        ">
-        HANDS
-            </a>
-</div>
+}
+body{
+  font-size: 50px;
+  text-align: center;
+  background-color: #ffeaea;
+  color: #BE8F8E;
+}
+p{
+  text-indent: -800px;
+}
+h1{
+  font-weight: normal;
+  float: right;
+  font-size: 20px;
+}
+  </style>
+  <body>
+    <div class="container" id="container">
+      <div class="square square-1"><a href="palette.html"><img src="h.png"></a></div>
+      <div class="square square-2"><a href="palette.html"><img src="n.png"></a></div>
+      <div class="square square-3"><a href="palette.html"><img src="a.png"></a></div>
+      <div class="square square-4"><a href="palette.html"><img src="d.png"></a>
+      <p><a href="palette.html" style="
+    margin-top: 0px;
+    width: 332px;
+    height: 316px;
+"><img src="s.png"></a>
+ </p>
+    </div>
+    </div>
+    <h1 style="
+      border-top-width: 50px;
+      margin-top: 300px;
+  ">
+    <p> - </p>
+<p>Welcome</p>
+     <p>to</p>
+      <p>the</p>
+       <p>World </p>
+       <p>of </p>
+       <p>Hands</p>
+         <p> - </p>
+         </h1>
 
-  <!-- <button><a href="mudras.html"> Mudras </a></button> -->
-<!--
+  </body>
+  <script>
 
-      <p><a href="mudras.html" style="
-      margin-top: 150px;
-      margin-bottom: 100px;
-      margin-right: 10px;
-      margin-left: 10px;
-  "><img src="karana.png" width="120" height="125"></a>
-  <a href="mudras.html" style="
-  margin-top: 150px;
-  margin-bottom: 100px;
-  margin-right: 10px;
-  margin-left: 10px;
-  "><img src="jnana.png" width="120" height="125"></a></p>
+var container = document.getElementById('container');
+var windowHeight = window.innerHeight;
+var windowWidth = window.innerWidth;
+var scrollArea = 1000 - windowHeight;
+var square1 = document.getElementsByClassName('square')[0];
+var square2 = document.getElementsByClassName('square')[1];
+var square3 = document.getElementsByClassName('square')[2];
+var square4 = document.getElementsByClassName('square')[3];
 
-    <p><a href="mudras.html" style="
-    margin-top: 150px;
-    margin-bottom: 100px;
-    margin-right: 10px;
-    margin-left: 10px;
-  "><img src="tarjani.png" width="120" height="125"></a>
-  <a href="mudras.html" style="
-  margin-top: 150px;
-  margin-bottom: 100px;
-  margin-right: 10px;
-  margin-left: 10px;
-  "><img src="vitarka.png" width="120" height="125"></a></p> -->
-</body>
+// update position of square 1 and square 2 when scroll event fires.
+window.addEventListener('scroll', function() {
+var scrollTop = window.pageYOffset || window.scrollTop;
+var scrollPercent = scrollTop/scrollArea || 0;
+
+square1.style.left = scrollPercent*window.innerWidth + 'px';
+square2.style.left = 800 - scrollPercent*window.innerWidth*0.6 + 'px';
+square3.style.left = 300 - scrollPercent*window.innerWidth*0.7 + 'px';
+square4.style.right = 600 - scrollPercent*window.innerWidth*0.9 + 'px';
+
+
+});
+  </script>
 </html>
