@@ -1,0 +1,36 @@
+body{
+  background-color: #f9eaca;
+  color: red;
+  font-style: italic;
+  font-family: serif;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 14px;
+}
+
+a:hover {
+    color: #be8f8e;
+}
+/* a:visited{
+  color: red;
+} */
+.previous {
+    background-color: red;
+    color: #f9eaca;
+}
+
+.next {
+    background-color: red;
+    color: #f9eaca;
+}
+
+.round {
+    border-radius: 50%;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 80px;
+}
