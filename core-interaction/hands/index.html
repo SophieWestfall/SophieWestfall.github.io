@@ -10,6 +10,7 @@ Hand Collection
   <style>
   body {
   overflow-x: hidden;
+  font-family: serif;
 }
 .container {
   width: 100%;
@@ -24,7 +25,8 @@ Hand Collection
   width: 100px;
   height: 200px ;
   /* background: #cccc99; */
-  top: 200px;
+  left: 800px;
+  top: 20px;
   padding-top: 50px;
 }
 
@@ -32,7 +34,7 @@ Hand Collection
   width: 200px;
   height: 100px;
   /* background: #ffcccc; */
-  left: 800px;
+  left: 900px;
   top: 30px;
   padding-top: 50px;
 }
@@ -40,16 +42,16 @@ Hand Collection
   width: 100px;
   height: 200px;
   /* background: #996666; */
-  left: 200px;
-  top: 200px;
+  left: 700px;
+  /* top: 100px; */
   padding-top: 50px;
 }
 .square-4 {
   width: 200px;
   height: 100px;
   /* background: #cc9966; */
-  right: 900px;
-  top: 100px;
+  left: 900px;
+  /* top: 100px; */
   padding-top: 50px;
 
 }
@@ -58,6 +60,7 @@ body{
   text-align: center;
   background-color: #ffeaea;
   color: #BE8F8E;
+  padding-top: 60px;
 }
 p{
   text-indent: -800px;
@@ -69,11 +72,13 @@ h1{
 }
   </style>
   <body>
+    <img src="leaf.jpg">
     <div class="container" id="container">
       <div class="square square-1"><a href="palette.html"><img src="h.png"></a></div>
       <div class="square square-2"><a href="palette.html"><img src="n.png"></a></div>
       <div class="square square-3"><a href="palette.html"><img src="a.png"></a></div>
       <div class="square square-4"><a href="palette.html"><img src="d.png"></a>
+
       <p><a href="palette.html" style="
     margin-top: 0px;
     width: 332px;
@@ -111,11 +116,12 @@ window.addEventListener('scroll', function() {
 var scrollTop = window.pageYOffset || window.scrollTop;
 var scrollPercent = scrollTop/scrollArea || 0;
 
-square1.style.left = scrollPercent*window.innerWidth + 'px';
-square2.style.left = 800 - scrollPercent*window.innerWidth*0.6 + 'px';
-square3.style.left = 300 - scrollPercent*window.innerWidth*0.7 + 'px';
-square4.style.right = 600 - scrollPercent*window.innerWidth*0.9 + 'px';
-
+if (scrollPercent*window.innerWidth < 1000) {
+  square1.style.top = scrollPercent*window.innerWidth + 'px';
+  square2.style.top = 800 + scrollPercent*window.innerWidth*0.6 + 'px';
+  square3.style.top = 300 - scrollPercent*window.innerWidth*0.7 + 'px';
+  square4.style.top = 600 - scrollPercent*window.innerWidth*0.9 + 'px';
+}
 
 });
   </script>

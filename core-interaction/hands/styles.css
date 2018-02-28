@@ -63,9 +63,14 @@ a {
     margin-top: 50%;
 }
 
+a:visited{
+  color: black;
+}
+
 a:hover {
     opacity: 0.5;
 }
+
 
 .previous {
     background-color: #bfa39d;
