@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> NYC </title>
-  </head>
-  <style>
-  body, html {
-      height: 100%;
-      margin: 0;
-      font-size: 500px;
-      font-weight: bold;
-      color: white;
-  }
+<head>
 
-  .bg {
-      background-image: url("nyc.png");
-      height: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-  }
-canvas{
-z-index: 10; 
+    <title> test </title>
+  <style>
+
+.knockout {
+background: url(taxi.gif);
+color: red;
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+font-weight: bold;
+font-size: 400px;
+font-family: arial black, sans-serif;
+width: 1000px;
+margin: 50px auto;
+text-align: center;
+}
+body{
+background: white;
+}
+
+p{
+font-family: helvetica, sans-serif;
+font-weight: bold;
+font-size: 40px;
+}
+canvas {
+  padding: 0;
+  margin: auto;
+  display: block;
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
   </style>
+</head>
+
   <body>
-    <div class="bg">
-      <center>
-        <!-- NYC -->
-      </center>
-</div>
-  </body>
+    <div class="knockout" style="
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 500px;
+    ">
+      <a href="coloring.html"> NYC</a>
+    </div>
+    </body>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js">
   </script>
 <script>
@@ -37,7 +59,7 @@ var barWidth = 20;
 var lastBar = -1;
 var img;
 function setup() {
-  createCanvas(840, 360);
+  createCanvas(1200, 500);
   background(0);
   // The image file must be in the data folder of the current sketch
   // to load successfully
@@ -71,4 +93,5 @@ function draw() {
 }
 }
 </script>
+
 </html>
