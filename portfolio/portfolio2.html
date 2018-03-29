@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<style>
+
+.parallax {
+    /* The image used */
+    background-image: url("watercolor/IMG_9060.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+</style>
+<body>
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Menu</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a class="menu-links" href="portfolio1.html">Home</a>
+    <a class="menu-links" href="acrylic.html">Acrylic</a>
+    <a class="menu-links" href="graphite&pen.html">Graphite & Pen</a>
+    <a class="menu-links" href="process.html">Process</a>
+    <a class="menu-links" href="watercolor.html">Watercolor</a>
+        <a class="menu-links" href="contact.html">Contact Me</a>
+
+  </div>
+</div>
+
+<div class="parallax"></div>
+<div style="height:120px"></div>
+
+
+
+<div class="parallax">
+
+<div style="height:1200px;font-size:36px" class="grad">
+
+
+<div style="height:350px;font-size:36px">
+<b> <p> <center> <a href="acrylic.html" style="text-decoration: none"> ACRYLIC </a> </center> </b> </p>
+<b> <p> <center> <a href="graphite&pen.html" style="text-decoration: none"> GRAPHITE & PEN </a> </center> </b> </p>
+<b> <p> <center> <a href="process.html" style="text-decoration: none"> PROCESS </a> </center> </b> </p>
+<b> <p> <center> <a href="watercolor.html" style="text-decoration: none"> WATERCOLOR </a> </center> </b> </p>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
+<script>
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link type="text/css" rel="stylesheet" href="style.css">
+
+</head>
+<style>
+.parallax {
+    /* The image used */
+    background-image: url("process/IMG_7090.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+</style>
+<body>
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Menu</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a class="menu-links" href="portfolio1.html">Home</a>
+    <a class="menu-links" href="acrylic.html">Acrylic</a>
+    <a class="menu-links" href="graphite&pen.html">Graphite & Pen</a>
+    <a class="menu-links" href="process.html">Process</a>
+    <a class="menu-links" href="watercolor.html">Watercolor</a>
+        <a class="menu-links" href="contact.html">Contact Me</a>
+
+  </div>
+</div>
+
+<div class="parallax"></div>
+
+<div style="height:800px; background color: #ffffff;font-size:36px"> 
+<center> <p> 2017 </p> </center>
+
+<center> <p> Watercolor 18x24" on Watercolor Paper. </p> </center>
+<center><img src="process/IMG_7090.jpg" width="816" height="612" alt="IMG_7090"></center>
+
+</div>
+<center><a href="process-1.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="process/IMG_1301.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="process-2.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="process/IMG_1302.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="process-3.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="process/IMG_1303.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="process-4.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="process/IMG_1324.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="process-5.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="process/IMG_1325.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="process-6.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="process/IMG_7090.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="process-7.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="process/IMG_7096.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="process-8.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="process/IMG_7252.jpg" alt="Smiley" width="128" height="128"></a></center>
+
+</body>
+</html>
+
+<script>
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>

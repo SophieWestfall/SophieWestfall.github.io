@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<link type="text/css" rel="stylesheet" href="style.css">
+
+<style>
+.parallax {
+    /* The image used */
+    background-image: url("pencil/IMG_0021.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+</style>
+
+<body>
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Menu</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a class="menu-links" href="portfolio1.html">Home</a>
+    <a class="menu-links" href="acrylic.html">Acrylic</a>
+    <a class="menu-links" href="graphite&pen.html">Graphite & Pen</a>
+    <a class="menu-links" href="process.html">Process</a>
+    <a class="menu-links" href="watercolor.html">Watercolor</a>
+        <a class="menu-links" href="contact.html">Contact Me</a>
+
+  </div>
+</div>
+
+<div class="parallax"></div>
+
+<div style="height:1400px; background color: #ffffff;font-size:36px"> 
+
+<center> <p> Tree </p> </center>
+<center> <p> 2017 </p> </center>
+
+<center> <p> Graphite 18x24" on Bristol Pad. </p> </center>
+<center><img src="pencil/IMG_0021.jpg" width="640" height="1136" alt="IMG_0021"></center>
+
+</div>
+<center><a href="pencil-1.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="pencil/IMG_7438.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="pencil-2.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="pencil/IMG_7443.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="pencil-3.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="pencil/IMG_8733.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="pencil-4.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="pencil/IMG_9824.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="pencil-5.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="pencil/IMG_0064.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="pencil-6.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="pencil/IMG_0021.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="pencil-7.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="pencil/IMG_0030.jpg" alt="Smiley" width="128" height="128"></a></center>
+
+</body>
+</html>
+
+<script>
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>

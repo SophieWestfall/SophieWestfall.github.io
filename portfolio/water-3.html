@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link type="text/css" rel="stylesheet" href="style.css">
+
+
+</head>
+<style>
+.parallax {
+    /* The image used */
+    background-image: url("watercolor/IMG_1360.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+</style>
+<body>
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Menu</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a class="menu-links" href="portfolio1.html">Home</a>
+    <a class="menu-links" href="acrylic.html">Acrylic</a>
+    <a class="menu-links" href="graphite&pen.html">Graphite & Pen</a>
+    <a class="menu-links" href="process.html">Process</a>
+    <a class="menu-links" href="watercolor.html">Watercolor</a>
+        <a class="menu-links" href="contact.html">Contact Me</a>
+
+  </div>
+</div>
+
+
+<div class="parallax"></div>
+
+<div style="height:1100px; background color: #ffffff;font-size:36px"> 
+<center> <p> Venus </p> </center>
+<center> <p> 2017 </p> </center>
+
+<center> <p> Watercolor 18x24" on Watercolor Paper. </p> </center>
+<center><img src="watercolor/IMG_1360.jpg" width="612" height="816" alt="IMG_1360"></center>
+
+</div>
+<center><a href="water-1.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="watercolor/IMG_9060.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="water-2.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="watercolor/IMG_1328.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="water-3.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="watercolor/IMG_1360.jpg" alt="Smiley" width="128" height="128"></a>
+
+<a href="water-4.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="watercolor/IMG_1361.jpg" alt="Smiley" width="128" height="128"></a>
+
+<a href="water-5.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="watercolor/IMG_7276.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="water-6.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="watercolor/IMG_8217.jpg" alt="Smiley" width="128" height="128"></a>
+
+<a href="water-7.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="watercolor/IMG_9740.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="water-8.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="watercolor/IMG_9816.jpg" alt="Smiley" width="128" height="128"></a></center>
+
+</body>
+</html>
+
+<script>
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>

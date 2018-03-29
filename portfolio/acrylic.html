@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+
+
+<head>
+<link type="text/css" rel="stylesheet" href="style.css">
+
+
+</head>
+<style>
+.parallax {
+    /* The image used */
+    background-image: url("acyrlic/IMG_7963.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+</style>
+<body>
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Menu</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a class="menu-links" href="portfolio1.html">Home</a>
+    <a class="menu-links" href="acrylic.html">Acrylic</a>
+    <a class="menu-links" href="graphite&pen.html">Graphite & Pen</a>
+    <a class="menu-links" href="process.html">Process</a>
+    <a class="menu-links" href="watercolor.html">Watercolor</a>
+        <a class="menu-links" href="contact.html">Contact Me</a>
+
+  </div>
+</div>
+
+<div class="parallax"></div>
+<div style="height:120px"></div>
+
+
+
+<div class="parallax">
+
+<div style="height:1200px;font-size:36px" class="grad">
+
+
+<p><center><a><h2> Acrylic </a></h2></center>
+
+
+
+<center><a href="acrylic-1.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="acyrlic/IMG_7374.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="acrylic-2.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="acyrlic/IMG_7375.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="acrylic-3.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="acyrlic/IMG_7963.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="acrylic-4.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="acyrlic/IMG_8022.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="acrylic-5.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="acyrlic/IMG_8528.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="acrylic-6.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="acyrlic/IMG_8635.jpg" alt="Smiley" width="128" height="128"></a>
+<a href="acrylic-7.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="acyrlic/IMG_0136.jpg" alt="Smiley" width="128" height="128"></a></center>
+
+  </div>
+</div>
+
+<script>
+
+function bigImg(x) {
+    x.style.height = "128px";
+    x.style.width = "128px";
+    
+}
+
+function normalImg(x) {
+    x.style.height = "192px";
+    x.style.width = "192px";
+}
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+</body>
+</html>
