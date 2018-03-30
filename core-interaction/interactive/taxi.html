@@ -19,12 +19,19 @@
     font-weight: lighter;
   }
   .bg {
-      /* background-image: url("nyc.w.outline.png"); */
+      /* background-image: url("taxi.png"); */
       height: 100%;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
   }
+
+  canvas{
+    background-image: url("taxi.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
 a{
   text-decoration: none;
   font-family:helvetica,sans-serif;
@@ -34,11 +41,6 @@ a:visited{
 }
 a:hover {
     opacity: 0.5;
-}
-canvas{
-  background-image: url("nyc.w.outline.png");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
   </style>
@@ -94,6 +96,8 @@ canvas{
                 x = "black";
                 break;
         }
+
+
     }
 
     function draw() {
@@ -153,16 +157,16 @@ canvas{
     }
     </script>
     <body onload="init()">
-      <!-- <div class="bg"> -->
+      <div class="bg">
       <a href="index.html"> Home </a>
-      - <a href="coloring.html"> Coloring Skyline </a>
-      - <a href="taxi.html"> Coloring Taxi </a>
-      - <a href="nyc.html"> The City That Never Sleeps </a>
+        - <a href="coloring.html"> Coloring Skyline </a>
+        - <a href="taxi.html"> Coloring Taxi </a>
+        - <a href="nyc.html"> The City That Never Sleeps </a>
 
-      <center><h2> Welcome to </h2></center>
+        <center><h2> Call a Cab </h2></center>
 
         <center><canvas id="can" width="1200" height="500" style="border:2px solid;">
-NYC90
+NYC
         </canvas></center>
         <!-- <div style="position:absolute;top:80%;left:43%;">Choose Color</div> -->
         <div style="border:solid;position:absolute;top:85%;left:45%;width:15px;height:15px;background:green;" id="green" onclick="color(this)"></div>
@@ -172,7 +176,7 @@ NYC90
         <div style="border:solid;position:absolute;top:85%;left:35%;width:15px;height:15px;background:orange;" id="orange" onclick="color(this)"></div>
         <div style="border:solid;position:absolute;top:85%;left:55%;width:15px;height:15px;background:black;" id="black" onclick="color(this)"></div>
         <input type="button" value="clear" id="btn" size="30" onclick="erase()" style="position:absolute;top:85%;left:10%;">
+</div>
 
-<!-- </div> -->
     </body>
     </html>

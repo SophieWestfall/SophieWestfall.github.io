@@ -2,9 +2,19 @@
 <html>
 <head>
 
-    <title> test </title>
+    <title> Stars </title>
   <style>
-
+body{
+  font-family:helvetica,sans-serif;
+}
+h2{
+  font-size: 30px;
+  font-style: italic;
+}
+h1{
+  font-size: 20px;
+  font-weight: lighter;
+}
 canvas {
   padding: 0;
   margin: auto;
@@ -17,17 +27,10 @@ canvas {
   left: 0;
   right: 0;
 }
-h2{
-  font-size: 30px;
-  font-style: italic;
-}
-h1{
-  font-size: 20px;
-  font-weight: lighter;
-}
+
 a{
   text-decoration: none;
-  font-family:serif;
+  font: sans-serif;
 }
 a:visited{
   color: black;
@@ -41,10 +44,12 @@ a:hover {
 <body>
   <a href="index.html"> Home </a>
   - <a href="coloring.html"> Coloring Page </a>
+  - <a href="taxi.html"> Coloring Taxi </a>
   - <a href="nyc.html"> The City That Never Sleeps </a>
   <center>
     <h2>The City That Never Sleeps </h2>
   </center>
+
 </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js">
   </script>
@@ -54,7 +59,7 @@ var lastBar = -1;
 var img;
 function setup() {
   createCanvas(1000, 500);
-  background(0);
+  background(255,255,255);
   // The image file must be in the data folder of the current sketch
   // to load successfully
   img = loadImage("nyc.png");  // Load the image into the program
@@ -78,7 +83,7 @@ function draw() {
   var whichBar = mouseX / barWidth;
   if (whichBar != lastBar) { // ! counteracts
     var barX = whichBar * barWidth;
-    fill(mouseY, height, height);
+    fill(255,255,255);
     rect(barX, 0, barWidth, height);
     lastBar = whichBar;
   noStroke();
