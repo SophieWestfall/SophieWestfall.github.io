@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title> Stickers </title>
+<style>
+a{
+  text-decoration: none;
+  font-family:helvetica,sans-serif;
+}
+a:visited{
+  color: black;
+}
+a:hover {
+    opacity: 0.5;
+}
+img{
+  padding: 10px
+}
+img:hover{
+  opacity: .5;
+}
+body, html {
+    height: 100%;
+    margin-top: 10;
+    color: black;
+    font-family:helvetica,sans-serif;
+}
+h2{
+  font-size: 30px;
+  font-style: italic;
+}
+h1{
+  font-size: 20px;
+  font-weight: lighter;
+}
+#div1 {
+    width: 1200px;
+    height: 500px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    padding: 0;
+    margin: auto;
+    display: block;
+    position:relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("graffiti.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
+</script>
+</head>
+<body>
+  <a href="index.html"> Home </a>
+    - <a href="coloring.html"> Coloring Skyline </a>
+    - <a href="taxi.html"> Coloring Taxi </a>
+    - <a href="subway.html"> Coloring Subway </a>
+    - <a href="stickers.html"> Stickers </a>
+    - <a href="nyc.html"> The City That Never Sleeps </a>
+
+    <center><h2> Sticker Sheet </h2></center>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<div style="position:absolute;top:90%;left:10%;">
+  <img id="drag1" src="heart.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+</div>
+<div style="position:absolute;top:90%;left:19%;">
+  <img id="drag2" src="broadway.png" draggable="true" ondragstart="drag(event)" width="200" height="70">
+</div>
+<div style="position:absolute;top:90%;left:35%;">
+  <img id="drag3" src="true.png" draggable="true" ondragstart="drag(event)" width="200" height="150">
+</div>
+<div style="position:absolute;top:90%;left:50%;">
+  <img id="drag4" src="monkey.png" draggable="true" ondragstart="drag(event)" width="200" height="250">
+</div>
+<div style="position:absolute;top:90%;left:60%;">
+  <img id="drag6" src="spray.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
+</div>
+<div style="position:absolute;top:90%;left:70%;">
+  <img id="drag5" src="green.png" draggable="true" ondragstart="drag(event)" width="300" height="150">
+</div>
+
+
+</body>
+</html>
