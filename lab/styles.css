@@ -1,0 +1,28 @@
+@media screen and (min-width: 400px) {
+  * {
+    box-sizing: border-box;
+}
+h1{
+  text-align: center;
+  color: black;
+  font-size: 50px;
+  border-spacing: 15px;
+  border-top: double;
+  border-bottom: double;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+body{
+    color: black;
+    margin: 0;
+    font-family: serif;
+    font-size: 17px
+}
+p{
+  text-align: justify;
+}
+}
