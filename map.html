@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heatmaps</title>
+    <style>
+
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+      #floating-panel {
+        background-color: #fff;
+        border: 1px solid #999;
+        left: 25%;
+        padding: 5px;
+        position: absolute;
+        top: 10px;
+        z-index: 5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <div id="floating-panel">
+      <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+      <button onclick="changeGradient()">Change gradient</button>
+      <button onclick="changeRadius()">Change radius</button>
+      <button onclick="changeOpacity()">Change opacity</button>
+    </div> -->
+    <div id="map"></div>
+    <script>
+
+      var map, heatmap;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.7308, lng: -73.9973},
+          zoom:20,
+          mapTypeId: 'satellite'
+        });
+
+        heatmap = new google.maps.visualization.HeatmapLayer({
+          data: getPoints(),
+          map: map
+        });
+      }
+
+      function toggleHeatmap() {
+        heatmap.setMap(heatmap.getMap() ? null : map);
+      }
+
+      function changeGradient() {
+        var gradient = [
+          'rgba(0, 255, 255, 0)',
+          'rgba(0, 255, 255, 1)',
+          'rgba(0, 191, 255, 1)',
+          'rgba(0, 127, 255, 1)',
+          'rgba(0, 63, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 223, 1)',
+          'rgba(0, 0, 191, 1)',
+          'rgba(0, 0, 159, 1)',
+          'rgba(0, 0, 127, 1)',
+          'rgba(63, 0, 91, 1)',
+          'rgba(127, 0, 63, 1)',
+          'rgba(191, 0, 31, 1)',
+          'rgba(255, 0, 0, 1)'
+        ]
+        heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
+      }
+
+      function changeRadius() {
+        heatmap.set('radius', heatmap.get('radius') ? null : 20);
+      }
+
+      // function changeOpacity() {
+      //   heatmap.set('opacity', heatmap.get('opacity') ? null : 0.5);
+      // }
+      function getPoints() {
+        return [
+          new google.maps.LatLng(40.730759, -73.997592),
+          new google.maps.LatLng(40.730734, -73.997571),
+          new google.maps.LatLng(40.730697, -73.997547),
+          new google.maps.LatLng(40.730646, -73.997481),
+          new google.maps.LatLng(40.730725, -73.997344),
+          new google.maps.LatLng(40.730741, -73.997272),
+          new google.maps.LatLng(40.730910, -73.997322),
+          new google.maps.LatLng(40.730901, -73.997304),
+          new google.maps.LatLng(40.730929, -73.997245),
+          new google.maps.LatLng(40.730990, -73.997324),
+          new google.maps.LatLng(40.730987, -73.997461),
+          new google.maps.LatLng(40.730952, -73.997629),
+          new google.maps.LatLng(40.730862, -73.997670),
+          new google.maps.LatLng(40.730957, -73.997592),
+          new google.maps.LatLng(40.730867, -73.997715),
+          new google.maps.LatLng(40.730707, -73.997634),
+          new google.maps.LatLng(40.731150, -73.997216),
+          new google.maps.LatLng(40.731126, -73.997221),
+          new google.maps.LatLng(40.731081, -73.997203),
+          new google.maps.LatLng(40.731107, -73.997230),
+          new google.maps.LatLng(40.731070, -73.997205),
+          new google.maps.LatLng(40.731070, -73.997205),
+          new google.maps.LatLng(40.730960, -73.997257),
+          new google.maps.LatLng(40.730716, -73.997110),
+          new google.maps.LatLng(40.730669, -73.997262),
+          new google.maps.LatLng(40.730589, -73.997376),
+          new google.maps.LatLng(40.731079, -73.997100),
+          new google.maps.LatLng(40.730777, -73.997750),
+          new google.maps.LatLng(40.7310, -73.99725),
+          new google.maps.LatLng(40.7310, -73.99725),
+          new google.maps.LatLng(40.7310, -73.99725),
+
+
+          new google.maps.LatLng(40.7308, -73.9973),
+          new google.maps.LatLng(40.7304, -73.9974),
+          new google.maps.LatLng(40.730679, -73.998383),
+          new google.maps.LatLng(40.730695, -73.998319),
+          new google.maps.LatLng(40.730694, -73.998318),
+          new google.maps.LatLng(40.730718, -73.997560),
+          new google.maps.LatLng(40.730843, -73.997626),
+          new google.maps.LatLng(40.730926, -73.997570),
+          new google.maps.LatLng(40.730926, -73.997570),
+          new google.maps.LatLng(40.730939, -73.997379),
+          new google.maps.LatLng(40.731027, -73.997645),
+          new google.maps.LatLng(40.731049, -73.997606),
+          new google.maps.LatLng(40.731069, -73.997451),
+          new google.maps.LatLng(40.731064, -73.997366),
+          new google.maps.LatLng(40.730995, -73.99721),
+          new google.maps.LatLng(40.730944, -73.99716),
+          new google.maps.LatLng(40.730756, -73.99715),
+          new google.maps.LatLng(40.730641, -73.99722),
+          new google.maps.LatLng(40.730602, -73.99731),
+          new google.maps.LatLng(40.730566, -73.99746),
+          new google.maps.LatLng(40.730578, -73.99756),
+          new google.maps.LatLng(40.730647, -73.99770),
+          new google.maps.LatLng(40.73071, -73.99775),
+          new google.maps.LatLng(40.73083, -73.99779),
+          new google.maps.LatLng(40.73088, -73.99778),
+          new google.maps.LatLng(40.7308, -73.9973),
+          // arch
+          new google.maps.LatLng(40.731224, -73.997213),
+          new google.maps.LatLng(40.731227, -73.997130),
+          new google.maps.LatLng(40.731298, -73.997189),
+          new google.maps.LatLng(40.731213, -73.997069),
+          new google.maps.LatLng(40.731173, -73.997041),
+          // side roads
+          new google.maps.LatLng(40.730543, -73.997023),
+          new google.maps.LatLng(40.730491, -73.997009),
+          new google.maps.LatLng(40.730448, -73.996932),
+          new google.maps.LatLng(40.730444, -73.996974),
+          new google.maps.LatLng(40.730501, -73.997002),
+          // dog park
+          new google.maps.LatLng(40.730771, -73.998463),
+          new google.maps.LatLng(40.730718, -73.998374),
+          new google.maps.LatLng(40.730695, -73.998332),
+          new google.maps.LatLng(40.730666, -73.998279),
+          // toddler play ground
+          new google.maps.LatLng(40.731538, -73.997579),
+        ];
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALg_mJNvUUe-7DOY5g-e7HibsnNIChJM0&libraries=visualization&callback=initMap">
+    </script>
+  </body>
+</html>
