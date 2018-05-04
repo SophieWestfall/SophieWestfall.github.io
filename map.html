@@ -17,10 +17,10 @@
         position: absolute;
         top: 10px;
         left: 25%;
-        z-index: 5;
+        z-index: 10;
         background-color: #fff;
         padding: 5px;
-        border: 1px solid #999;
+        border: 4px solid #999;
         text-align: center;
         font-family: 'Roboto','sans-serif';
         line-height: 30px;
@@ -28,23 +28,21 @@
       }
       #floating-panel {
         background-color: #fff;
-        border: 1px solid #999;
+        border: 4px solid #999;
         left: 25%;
         padding: 5px;
         position: absolute;
         top: 10px;
-        z-index: 5;
+        z-index: 10;
       }
     </style>
   </head>
 
   <body>
-    <!-- <div id="floating-panel">
-      <button onclick="toggleHeatmap()">Toggle Heatmap</button>
-      <button onclick="changeGradient()">Change gradient</button>
-      <button onclick="changeRadius()">Change radius</button>
-      <button onclick="changeOpacity()">Change opacity</button>
-    </div> -->
+    <div id="floating-panel">
+        <button onclick="changeGradient()">Change gradient</button>
+      <button onclick="changeRadius(20)">Change radius</button>
+    </div>
     <div id="map"></div>
     <script>
 
@@ -53,7 +51,7 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 40.7308, lng: -73.9973},
-          zoom:20,
+          zoom:19,
           mapTypeId: 'satellite'
         });
 
@@ -61,6 +59,8 @@
           data: getPoints(),
           map: map
         });
+
+        changeRadius(60);
       }
 
       function toggleHeatmap() {
@@ -70,25 +70,25 @@
       function changeGradient() {
         var gradient = [
           'rgba(0, 255, 255, 0)',
-          'rgba(0, 255, 255, 1)',
-          'rgba(0, 191, 255, 1)',
-          'rgba(0, 127, 255, 1)',
-          'rgba(0, 63, 255, 1)',
-          'rgba(0, 0, 255, 1)',
-          'rgba(0, 0, 223, 1)',
-          'rgba(0, 0, 191, 1)',
-          'rgba(0, 0, 159, 1)',
-          'rgba(0, 0, 127, 1)',
-          'rgba(63, 0, 91, 1)',
-          'rgba(127, 0, 63, 1)',
-          'rgba(191, 0, 31, 1)',
-          'rgba(255, 0, 0, 1)'
+          'rgba(0, 255, 255, 2)',
+          'rgba(0, 191, 255, 2)',
+          'rgba(0, 127, 255, 2)',
+          'rgba(0, 63, 255, 2)',
+          'rgba(0, 0, 255, 2)',
+          'rgba(0, 0, 223, 2)',
+          'rgba(0, 0, 191, 2)',
+          'rgba(0, 0, 159, 2)',
+          'rgba(0, 0, 127, 2)',
+          'rgba(63, 0, 91, 2)',
+          'rgba(127, 0, 63, 2)',
+          'rgba(191, 0, 31, 2)',
+          'rgba(255, 0, 0, 2)'
         ]
         heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
       }
 
-      function changeRadius() {
-        heatmap.set('radius', heatmap.get('radius') ? null : 20);
+      function changeRadius(radius) {
+        heatmap.set('radius', radius);
       }
 
       // function changeOpacity() {
@@ -127,7 +127,6 @@
           new google.maps.LatLng(40.7310, -73.99725),
           new google.maps.LatLng(40.7310, -73.99725),
           new google.maps.LatLng(40.7310, -73.99725),
-
 
           new google.maps.LatLng(40.7308, -73.9973),
           new google.maps.LatLng(40.7304, -73.9974),
