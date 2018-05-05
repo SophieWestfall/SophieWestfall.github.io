@@ -40,10 +40,13 @@
 
   <body>
     <div id="floating-panel">
-        <button onclick="changeGradient()">Change gradient</button>
-      <button onclick="changeRadius(20)">Change radius</button>
+        <center><button onclick="changeGradient()">Change gradient</button>
+      <button onclick="changeRadius(20)">Change radius</button></center>
+      <a href="info.html"><img src="i.png" width="50" height="50"></a>
     </div>
+
     <div id="map"></div>
+
     <script>
 
       var map, heatmap;
@@ -189,5 +192,6 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALg_mJNvUUe-7DOY5g-e7HibsnNIChJM0&libraries=visualization&callback=initMap">
     </script>
+
   </body>
 </html>
