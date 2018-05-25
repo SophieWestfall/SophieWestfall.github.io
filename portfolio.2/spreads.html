@@ -4,6 +4,28 @@
     <title>Book Spreads</title>
     <link rel="stylesheet" href="styles.css">
   </head>
+  <style>
+  * {
+      box-sizing: border-box;
+  }
+  .column {
+      float: left;
+      width: 50%;
+      height: 300px;
+  }
+
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+  #left, #right {
+      float: left;
+      width: 100%;
+      height: 150%;
+      overflow: auto;
+  }
+  </style>
   <body>
     <div class="topnav">
       <a class="active" href="1.html">Home</a>
@@ -16,8 +38,43 @@
   <a href="self.html">Self Work</a>
   <a href="resume.html">Resume</a>
   </div>
+  <h2><p> Spreads: </p></h2>
+
       <p> Spreads made for a book based about Baruch Drive, New York.
         I relate this book to family with combinoations of photos and words.
       I also include some begining Spreads before the finished product. </p>
+      <center>
+        <div class="row">
+    <div class="column" style="background-color:#ffffff;">
+ <div id="left">
+   <img src="cover.png" width="400" height="520">
+   <img src="1.png" width="540" height="400">
+   <img src="2.png" width="540" height="400">
+   <img src="3.png" width="540" height="400">
+   <img src="4.png" width="540" height="400">
+   <img src="5.png" width="540" height="400">
+   <img src="6.png" width="540" height="400">
+   <img src="7.png" width="540" height="400">
+   <img src="8.png" width="540" height="400">
+   <img src="9.png" width="540" height="400">
+   <img src="10.png" width="540" height="400">
+   <img src="11.png" width="540" height="400">
+   <img src="12.png" width="540" height="400">
+   <img src="13.png" width="540" height="400">
+   <img src="14.png" width="540" height="400">
+   <img src="15.png" width="540" height="400">
+   <img src="16.png" width="540" height="400">
+ </div>
+ </div>
+
+   <div class="column" style="background-color:#ffffff;">
+<div id="right">
+   <img src="clear.png" width="560" height="450">
+   <img src="orange.png" width="560" height="450">
+</div>
+</div>
+
+</div>
+</center>
     </body>
   </html>

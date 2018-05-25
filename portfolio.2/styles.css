@@ -34,13 +34,18 @@ overflow: hidden;
 .topnav a {
 float: left;
 color: black;
+font-family: sans-serif;
+font-weight: lighter;
+font-style: normal;
 text-align: center;
 padding: 14px 16px;
 text-decoration: none;
 font-size: 17px;
 }
 .topnav a.active {
-color: #ff9999;
+color: black;
+font-weight: bold;
+
 }
 a:visited{
   color: black;
@@ -54,5 +59,6 @@ a:hover{
   color: gray;
 }
 h2{
-  color: #ff9999;
+  color: black;
 }
+"
