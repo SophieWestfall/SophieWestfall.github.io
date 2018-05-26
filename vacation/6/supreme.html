@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Day 6 </title>
+  </head>
+  <style>
+  * {
+      box-sizing: border-box;
+  }
+  .column {
+      float: left;
+      width: 50%;
+      height: 300px;
+  }
+
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+  #left, #right {
+      float: left;
+      width: 100%;
+      height: 150%;
+      overflow: auto;
+  }
+  </style>
+  <body>
+    <center>
+      <div class="row">
+    <div class="column" style="background-color:#ffffff;">
+ <div id="left">
+   <img src="box1.png" width="520" height="200">
+   <img src="box2.png" width="520" height="200">
+   <img src="box3.png" width="520" height="200">
+   <img src="box4.png" width="520" height="200">
+
+</div>
+</div>
+ <div class="column" style="background-color:#ffffff;">
+   <div id="right">
+   <img src="white.png" width="470" height="600">
+   <img src="red.png" width="520" height="500">
+   <img src="blue.png" width="520" height="500">
+   <img src="gray.png" width="520" height="500">
+
+</div>
+</div>
+</div>
+</center>
+  </body>
+</html>
